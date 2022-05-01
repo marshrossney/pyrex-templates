@@ -1,0 +1,8 @@
+{
+    "workspace_name": "workspace",
+    "package_name": "{{cookiecutter.workspace_name|slugify(separator='_')}}",
+    "description": "",
+    "use_conda": "No",
+    "_version_command": "poetry version --short",
+    "__python_version": "{{cookiecutter.__python_version}}"
+}

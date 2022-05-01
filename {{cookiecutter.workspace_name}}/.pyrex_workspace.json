@@ -1,0 +1,16 @@
+{
+    "workspace_root": ".",
+    "version_command": "poetry version --short",
+    "experiments": {
+        "main": {
+            "command": "poetry run python {{cookiecutter.package_name}}/main.py",
+            "output_path": "{workspace_root}/experiments/{branch}/{version}/main/{timestamp}",
+            "required_files": []
+        },
+        "tox": {
+            "command": "tox -c pyrex.ini -e default --",
+            "output_path": "{workspace_root}/experiments/{branch}/{version}/tox/{timestamp}",
+            "required_files": []
+        }
+    }
+}
