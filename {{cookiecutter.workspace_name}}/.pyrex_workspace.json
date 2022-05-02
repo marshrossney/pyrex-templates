@@ -2,15 +2,20 @@
     "workspace_root": ".",
     "version_command": "poetry version --short",
     "experiments": {
-        "main": {
+        "poetry-example": {
             "command": "poetry run python {{cookiecutter.package_name}}/main.py",
-            "output_path": "{workspace_root}/experiments/{branch}/{version}/main/{timestamp}",
-            "required_files": []
+            "output_path": "{workspace_root}/experiments/examples/poetry/{timestamp}",
+            "required_files": ["{{cookiecutter.package_name}}/main.py"]
         },
-        "tox": {
-            "command": "tox -c pyrex.ini -e default --",
-            "output_path": "{workspace_root}/experiments/{branch}/{version}/tox/{timestamp}",
-            "required_files": []
+        "tox-example": {
+            "command": "tox -c experiments.ini -e example --result-json output.json --",
+            "output_path": "{workspace_root}/experiments/examples/tox/{timestamp}",
+            "required_files": ["experiments.ini"]
+        },
+        "nox-example": {
+            "command": "nox -f experiments.py -e example --report output.json --",
+            "output_path": "{workspace_root}/experiments/examples/nox/{timestamp}",
+            "required_files": ["experiments.py"]
         }
     }
 }
