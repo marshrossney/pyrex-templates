@@ -1,0 +1,7 @@
+*
+!.gitignore
+!README.rst
+!pyrex.log
+{% for file in cookiecutter.experiment.files -%}
+!{{ file }}
+{% endfor %}
