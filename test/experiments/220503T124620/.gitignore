@@ -1,0 +1,7 @@
+*
+!.gitignore
+!README.rst
+!pyrex.log
+!file1.txt
+!folder/file2.txt
+
