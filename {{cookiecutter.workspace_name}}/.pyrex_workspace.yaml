@@ -1,0 +1,3 @@
+version: 0.1
+experiments_file: experiments.yaml
+experiments_output_path: "{workspace_root}/experiments"
