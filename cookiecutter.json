@@ -1,31 +1,12 @@
 {
-    "author": {
-        "name": "",
-        "profile": "",
-        "email": ""
-    },
-    "workspace": {
-        "name": "",
-        "path": "",
-        "relpath": "",
-        "version": ""
-    },
-    "repo": {
-        "name": "",
-        "relpath": "",
-        "url": "",
-        "branch": "",
-        "commit": ""
-    },
-    "experiment": {
-        "name": "",
-        "dirname": "",
-        "path": "",
-        "timestamp": "",
-        "timestamp_pretty": "",
-        "files": [],
-        "commands": []
-    }
+    "_author": "",
+    "_date": "",
+    "_experiment": "",
+    "_path": "",
+    "_repository": "",
+    "_timestamp": "",
+    "_workspace": "",
+    "experiment_dir": "{{cookiecutter._timestamp}}"
 }
 
     
