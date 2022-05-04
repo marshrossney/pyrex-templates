@@ -2,8 +2,24 @@
 {{ cookiecutter._experiment.title | title }}
 ============================================
 
-{{ cookiecutter._experiment.description }}
+Description
+{{ cookiecutter._experiment.description | indent(2, True) }}
 
+-------------------
+Run this experiment
+-------------------
+
+{% if cookiecutter._repository.name | length -%}
+(1) Clone this repository, checkout this branch, and navigate to this directory.
+(2) Run ``git checkout {{ cookiecutter._repository.commit }}``.
+(3) Finally, execute the commands below
+{%- endif %}
+
+.. code:: sh
+
+{% for cmd in cookiecutter._experiment.commands -%}
+{{ cmd | indent(4, True) }}
+{% endfor %}
 
 ***
 
